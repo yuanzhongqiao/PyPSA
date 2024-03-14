@@ -1,111 +1,85 @@
-# PyPSA - Python for Power System Analysis
+<div class="Box-sc-g0xbh4-0 bJMeLZ js-snippet-clipboard-copy-unpositioned" data-hpc="true"><article class="markdown-body entry-content container-lg" itemprop="text"><div class="markdown-heading" dir="auto"><h1 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">PyPSA - 用于电力系统分析的 Python</font></font></h1><a id="user-content-pypsa---python-for-power-system-analysis" class="anchor" aria-label="永久链接：PyPSA - 用于电力系统分析的 Python" href="#pypsa---python-for-power-system-analysis"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><a href="https://pypi.python.org/pypi/pypsa" rel="nofollow"><img src="https://camo.githubusercontent.com/28413c60094c2c7aa5070d65b3dbc676bc9c026aa1ceb53ae238bcc61dd74026/68747470733a2f2f696d672e736869656c64732e696f2f707970692f762f70797073612e737667" alt="PyPI版本" data-canonical-src="https://img.shields.io/pypi/v/pypsa.svg" style="max-width: 100%;"></a>
+<a href="https://anaconda.org/conda-forge/pypsa" rel="nofollow"><img src="https://camo.githubusercontent.com/ecbe2fea1f98733a35f144c30bf2eb01221fc03250405abbdbe5c98a85c18b12/68747470733a2f2f696d672e736869656c64732e696f2f636f6e64612f766e2f636f6e64612d666f7267652f70797073612e737667" alt="康达版本" data-canonical-src="https://img.shields.io/conda/vn/conda-forge/pypsa.svg" style="max-width: 100%;"></a>
+<a href="https://github.com/pypsa/pypsa/actions/workflows/CI.yml"><img src="https://github.com/pypsa/pypsa/actions/workflows/CI.yml/badge.svg" alt="CI" style="max-width: 100%;"></a>
+<a href="https://github.com/pypsa/pypsa/actions/workflows/CI-micromamba.yml"><img src="https://github.com/pypsa/pypsa/actions/workflows/CI-micromamba.yml/badge.svg" alt="CI 与微曼巴蛇" style="max-width: 100%;"></a>
+<a href="https://codecov.io/gh/PyPSA/PyPSA" rel="nofollow"><img src="https://camo.githubusercontent.com/d0b06c1186a4449c18d607d7c6d8cd4a2974bfcf4e2eab6e76a472470ae79007/68747470733a2f2f636f6465636f762e696f2f67682f50795053412f50795053412f6272616e63682f6d61737465722f67726170682f62616467652e7376673f746f6b656e3d6b4370774a6956364a72" alt="代码覆盖率" data-canonical-src="https://codecov.io/gh/PyPSA/PyPSA/branch/master/graph/badge.svg?token=kCpwJiV6Jr" style="max-width: 100%;"></a>
+<a href="https://pypsa.readthedocs.io/en/latest/?badge=latest" rel="nofollow"><img src="https://camo.githubusercontent.com/fd6c586108512473d47ffe725cb5257cc837a6d77afd81015c9bc170ab891916/68747470733a2f2f72656164746865646f63732e6f72672f70726f6a656374732f70797073612f62616467652f3f76657273696f6e3d6c6174657374" alt="文件状态" data-canonical-src="https://readthedocs.org/projects/pypsa/badge/?version=latest" style="max-width: 100%;"></a>
+<a href="/PyPSA/PyPSA/blob/master/LICENSE.txt"><img src="https://camo.githubusercontent.com/11a73847186f38a19bc5e9b6ee667b584b41189511b6adedfec2e001517b6d71/68747470733a2f2f696d672e736869656c64732e696f2f707970692f6c2f70797073612e737667" alt="执照" data-canonical-src="https://img.shields.io/pypi/l/pypsa.svg" style="max-width: 100%;"></a>
+<a href="https://doi.org/10.5281/zenodo.3946412" rel="nofollow"><img src="https://camo.githubusercontent.com/3d50522bdeecd8d23577acbcee24ca2d118042a7bf5573cc57255fb0258c09d2/68747470733a2f2f7a656e6f646f2e6f72672f62616467652f444f492f31302e353238312f7a656e6f646f2e333934363431322e737667" alt="泽诺多" data-canonical-src="https://zenodo.org/badge/DOI/10.5281/zenodo.3946412.svg" style="max-width: 100%;"></a>
+<a href="https://mybinder.org/v2/gh/PyPSA/PyPSA/master?filepath=examples%2Fnotebooks" rel="nofollow"><img src="https://camo.githubusercontent.com/e91e1d353a8b6acf0b42547ac3901f2c30138a3abaaa3d3c242da30b5b4f8426/68747470733a2f2f6d7962696e6465722e6f72672f62616467655f6c6f676f2e737667" alt="使用示例" data-canonical-src="https://mybinder.org/badge_logo.svg" style="max-width: 100%;"></a>
+<a href="https://results.pre-commit.ci/latest/github/PyPSA/PyPSA/master" rel="nofollow"><img src="https://camo.githubusercontent.com/1c07d6a03ed0b7f5475cab96114303ad0ed7ddaa361f3e4cc6df2174cd1d0038/68747470733a2f2f726573756c74732e7072652d636f6d6d69742e63692f62616467652f6769746875622f50795053412f50795053412f6d61737465722e737667" alt="预提交.ci 状态" data-canonical-src="https://results.pre-commit.ci/badge/github/PyPSA/PyPSA/master.svg" style="max-width: 100%;"></a>
+<a href="https://github.com/psf/black"><img src="https://camo.githubusercontent.com/7d770c433d6198d89f8c1e2f187b904a9721d176259d0e97157337741cc8e837/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f636f64652532307374796c652d626c61636b2d3030303030302e737667" alt="代码风格：黑色" data-canonical-src="https://img.shields.io/badge/code%20style-black-000000.svg" style="max-width: 100%;"></a>
+<a href="https://discord.gg/AnuJBk23FU" rel="nofollow"><img src="https://camo.githubusercontent.com/9d66572fe0b78a42f85b09d202be59b1bbc2224816b32b43dc55ad6ce2ca619d/68747470733a2f2f696d672e736869656c64732e696f2f646973636f72642f3931313639323133313434303134383439303f6c6f676f3d646973636f7264" alt="不和谐" data-canonical-src="https://img.shields.io/discord/911692131440148490?logo=discord" style="max-width: 100%;"></a>
+<a href="/PyPSA/PyPSA/blob/master/CODE_OF_CONDUCT.md"><img src="https://camo.githubusercontent.com/e20d7cf30325f8051a123caf9ff8ce4e024aa5c940c112279ce2cf3a26daf4cc/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f436f6e7472696275746f72253230436f76656e616e742d322e312d3462616161612e737667" alt="贡献者契约" data-canonical-src="https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg" style="max-width: 100%;"></a>
+<a href="https://stackoverflow.com/questions/tagged/pypsa" rel="nofollow"><img src="https://camo.githubusercontent.com/6847d602235afe7f5b298f418e95fc6e2b6cf0cb6d7821d57a2748ee1fcbf621/68747470733a2f2f696d672e736869656c64732e696f2f737461636b65786368616e67652f737461636b6f766572666c6f772f742f7079707361" alt="堆栈交换问题" data-canonical-src="https://img.shields.io/stackexchange/stackoverflow/t/pypsa" style="max-width: 100%;"></a></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">PyPSA 代表“用于电力系统分析的 Python”。</font><font style="vertical-align: inherit;">发音为“pipes-ah”。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">PyPSA 是一个开源工具箱，用于模拟和优化现代电力和能源系统，包括具有单位承诺的传统发电机、可变风力和太阳能发电、存储单元、与其他能源部门的耦合以及混合交流和直流网络等功能。</font><font style="vertical-align: inherit;">PyPSA 旨在适应大型网络和长时间序列的良好扩展。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><a href="https://www.tu.berlin" rel="nofollow"><font style="vertical-align: inherit;">该项目由柏林工业大学</font></a><font style="vertical-align: inherit;">能源</font></font><a href="https://tub-ensys.github.io" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">系统数字化转型系</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">维护</font><font style="vertical-align: inherit;">。</font><a href="https://www.helmholtz.de/en/" rel="nofollow"><font style="vertical-align: inherit;">以前的版本是由亥姆霍兹协会</font></a><font style="vertical-align: inherit;">资助的
+卡尔斯鲁厄</font><font style="vertical-align: inherit;">理工学院</font><a href="https://www.iai.kit.edu/english/index.php" rel="nofollow"><font style="vertical-align: inherit;">自动化和应用信息学研究所</font></a><a href="http://www.kit.edu/english/index.php" rel="nofollow"><font style="vertical-align: inherit;">的</font></a><font style="vertical-align: inherit;">能源系统建模小组和</font><a href="https://fias.uni-frankfurt.de/" rel="nofollow"><font style="vertical-align: inherit;">FIAS</font></a><font style="vertical-align: inherit;">
+的</font><a href="https://fias.uni-frankfurt.de/physics/schramm/renewable-energy-system-and-network-analysis/" rel="nofollow"><font style="vertical-align: inherit;">可再生能源小组</font></a><font style="vertical-align: inherit;">开发的，用于对</font><a href="https://fias.institute/en/projects/condynet/" rel="nofollow"><font style="vertical-align: inherit;">CoNDyNet 项目</font></a><font style="vertical-align: inherit;">进行模拟
+</font><font style="vertical-align: inherit;">，该项目由</font><a href="https://www.bmbf.de/en/index.html" rel="nofollow"><font style="vertical-align: inherit;">德国联邦教育和研究部 (BMBF)</font></a><font style="vertical-align: inherit;">
+作为</font><a href="http://forschung-stromnetze.info/projekte/grundlagen-und-konzepte-fuer-effiziente-dezentrale-stromnetze/" rel="nofollow"><font style="vertical-align: inherit;">Stromnetze 研究计划</font></a><font style="vertical-align: inherit;">的一部分。</font></font><a href="https://www.tu.berlin" rel="nofollow"><font style="vertical-align: inherit;"></font></a><font style="vertical-align: inherit;"></font><a href="https://www.iai.kit.edu/english/index.php" rel="nofollow"><font style="vertical-align: inherit;"></font></a><font style="vertical-align: inherit;"></font><a href="http://www.kit.edu/english/index.php" rel="nofollow"><font style="vertical-align: inherit;"></font></a><font style="vertical-align: inherit;"></font><a href="https://www.helmholtz.de/en/" rel="nofollow"><font style="vertical-align: inherit;"></font></a><font style="vertical-align: inherit;"></font><a href="https://fias.uni-frankfurt.de/physics/schramm/renewable-energy-system-and-network-analysis/" rel="nofollow"><font style="vertical-align: inherit;"></font></a><font style="vertical-align: inherit;"></font><a href="https://fias.uni-frankfurt.de/" rel="nofollow"><font style="vertical-align: inherit;"></font></a><font style="vertical-align: inherit;"></font><a href="https://fias.institute/en/projects/condynet/" rel="nofollow"><font style="vertical-align: inherit;"></font></a><font style="vertical-align: inherit;"></font><a href="https://www.bmbf.de/en/index.html" rel="nofollow"><font style="vertical-align: inherit;"></font></a><font style="vertical-align: inherit;"></font><a href="http://forschung-stromnetze.info/projekte/grundlagen-und-konzepte-fuer-effiziente-dezentrale-stromnetze/" rel="nofollow"><font style="vertical-align: inherit;"></font></a><font style="vertical-align: inherit;"></font></p>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">功能性</font></font></h2><a id="user-content-functionality" class="anchor" aria-label="永久链接：功能" href="#functionality"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">PyPSA 可以计算：</font></font></p>
+<ul dir="auto">
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">静态功率流（使用完整的非线性网络方程和线性化网络方程）</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">线性最优潮流（使用线性网络方程，在多个快照上对网络约束内的发电厂和存储调度进行最低成本优化）</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">安全约束线性最优潮流</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">总电力/能源系统最低成本投资优化（使用线性网络方程，同时在多个快照和投资周期内优化发电和存储调度以及发电、存储、传输和其他基础设施容量的投资）</font></font></li>
+</ul>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">它有以下型号：</font></font></p>
+<ul dir="auto">
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">网状多重连接的交流和直流网络，交流和直流网络之间具有可控转换器</font></font></li>
+<li><font style="vertical-align: inherit;"><a href="https://www.pandapower.org/" rel="nofollow"><font style="vertical-align: inherit;">pandapower</font></a><font style="vertical-align: inherit;">实施后的线路和变压器的标准类型
+</font></font><a href="https://www.pandapower.org/" rel="nofollow"><font style="vertical-align: inherit;"></font></a></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">传统的可调度发电机和与单位承诺的联系</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">电力可用性随时间变化的发电机，例如风力发电机和太阳能发电机</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">存在效率损失的存储单元</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">具有流入和溢出的简单水力发电</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">与其他能源载体耦合（例如电阻式电转热（P2H）、电转气（P2G）、纯电动汽车（BEV）、费托合成、直接空气捕获（DAC））</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">可以构建更复杂资产的基本组件，例如热电联产 (CHP) 装置和热泵。</font></font></li>
+</ul>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">文档</font></font></h2><a id="user-content-documentation" class="anchor" aria-label="永久链接：文档" href="#documentation"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><a href="https://pypsa.readthedocs.io/en/latest/index.html" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">文档</font></font></a></p>
+<p dir="auto"><a href="https://pypsa.readthedocs.io/en/latest/quick_start.html" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">快速开始</font></font></a></p>
+<p dir="auto"><a href="https://pypsa.readthedocs.io/en/latest/examples-basic.html" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">例子</font></font></a></p>
+<p dir="auto"><a href="https://pypsa.readthedocs.io/en/latest/users.html" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">PyPSA 的已知用户</font></font></a></p>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">安装</font></font></h2><a id="user-content-installation" class="anchor" aria-label="永久链接：安装" href="#installation"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">点：</font></font></p>
+<p dir="auto"><code>pip install pypsa</code></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">康达/曼巴：</font></font></p>
+<p dir="auto"><code>conda install -c conda-forge pypsa</code></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">此外，安装求解器。</font></font></p>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">用法</font></font></h2><a id="user-content-usage" class="anchor" aria-label="永久链接：用法" href="#usage"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<div class="highlight highlight-source-python notranslate position-relative overflow-auto" dir="auto"><pre><span class="pl-k">import</span> <span class="pl-s1">pypsa</span>
 
+<span class="pl-c"># create a new network</span>
+<span class="pl-s1">n</span> <span class="pl-c1">=</span> <span class="pl-s1">pypsa</span>.<span class="pl-v">Network</span>()
+<span class="pl-s1">n</span>.<span class="pl-en">add</span>(<span class="pl-s">"Bus"</span>, <span class="pl-s">"mybus"</span>)
+<span class="pl-s1">n</span>.<span class="pl-en">add</span>(<span class="pl-s">"Load"</span>, <span class="pl-s">"myload"</span>, <span class="pl-s1">bus</span><span class="pl-c1">=</span><span class="pl-s">"mybus"</span>, <span class="pl-s1">p_set</span><span class="pl-c1">=</span><span class="pl-c1">100</span>)
+<span class="pl-s1">n</span>.<span class="pl-en">add</span>(<span class="pl-s">"Generator"</span>, <span class="pl-s">"mygen"</span>, <span class="pl-s1">bus</span><span class="pl-c1">=</span><span class="pl-s">"mybus"</span>, <span class="pl-s1">p_nom</span><span class="pl-c1">=</span><span class="pl-c1">100</span>, <span class="pl-s1">marginal_cost</span><span class="pl-c1">=</span><span class="pl-c1">20</span>)
 
-[![PyPI version](https://img.shields.io/pypi/v/pypsa.svg)](https://pypi.python.org/pypi/pypsa)
-[![Conda version](https://img.shields.io/conda/vn/conda-forge/pypsa.svg)](https://anaconda.org/conda-forge/pypsa)
-[![CI](https://github.com/pypsa/pypsa/actions/workflows/CI.yml/badge.svg)](https://github.com/pypsa/pypsa/actions/workflows/CI.yml)
-[![CI with micromamba](https://github.com/pypsa/pypsa/actions/workflows/CI-micromamba.yml/badge.svg)](https://github.com/pypsa/pypsa/actions/workflows/CI-micromamba.yml)
-[![Code coverage](https://codecov.io/gh/PyPSA/PyPSA/branch/master/graph/badge.svg?token=kCpwJiV6Jr)](https://codecov.io/gh/PyPSA/PyPSA)
-[![Documentation Status](https://readthedocs.org/projects/pypsa/badge/?version=latest)](https://pypsa.readthedocs.io/en/latest/?badge=latest)
-[![License](https://img.shields.io/pypi/l/pypsa.svg)](LICENSE.txt)
-[![Zenodo](https://zenodo.org/badge/DOI/10.5281/zenodo.3946412.svg)](https://doi.org/10.5281/zenodo.3946412)
-[![Examples of use](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/PyPSA/PyPSA/master?filepath=examples%2Fnotebooks)
-[![pre-commit.ci status](https://results.pre-commit.ci/badge/github/PyPSA/PyPSA/master.svg)](https://results.pre-commit.ci/latest/github/PyPSA/PyPSA/master)
-[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
-[![Discord](https://img.shields.io/discord/911692131440148490?logo=discord)](https://discord.gg/AnuJBk23FU)
-[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](CODE_OF_CONDUCT.md)
-[![Stack Exchange questions](https://img.shields.io/stackexchange/stackoverflow/t/pypsa)](https://stackoverflow.com/questions/tagged/pypsa)
+<span class="pl-c"># load an example network</span>
+<span class="pl-s1">n</span> <span class="pl-c1">=</span> <span class="pl-s1">pypsa</span>.<span class="pl-s1">examples</span>.<span class="pl-en">ac_dc_meshed</span>()
 
-PyPSA stands for "Python for Power System Analysis". It is pronounced
-"pipes-ah".
+<span class="pl-c"># run the optimisation</span>
+<span class="pl-s1">n</span>.<span class="pl-en">optimize</span>()
 
-PyPSA is an open source toolbox for simulating and optimising modern power and
-energy systems that include features such as conventional generators with unit
-commitment, variable wind and solar generation, storage units, coupling to other
-energy sectors, and mixed alternating and direct current networks. PyPSA is
-designed to scale well with large networks and long time series.
+<span class="pl-c"># plot results</span>
+<span class="pl-s1">n</span>.<span class="pl-s1">generators_t</span>.<span class="pl-s1">p</span>.<span class="pl-en">plot</span>()
+<span class="pl-s1">n</span>.<span class="pl-en">plot</span>()
 
-This project is maintained by the [Department of Digital Transformation in
-Energy Systems](https://tub-ensys.github.io) at the [Technical University of
-Berlin](https://www.tu.berlin). Previous versions were developed by the Energy
-System Modelling group at the [Institute for Automation and Applied
-Informatics](https://www.iai.kit.edu/english/index.php) at the [Karlsruhe
-Institute of Technology](http://www.kit.edu/english/index.php) funded by the
-[Helmholtz Association](https://www.helmholtz.de/en/), and by the [Renewable
-Energy
-Group](https://fias.uni-frankfurt.de/physics/schramm/renewable-energy-system-and-network-analysis/)
-at [FIAS](https://fias.uni-frankfurt.de/) to carry out simulations for the
-[CoNDyNet project](http://condynet.de/), financed by the [German Federal
-Ministry for Education and Research (BMBF)](https://www.bmbf.de/en/index.html)
-as part of the [Stromnetze Research
-Initiative](http://forschung-stromnetze.info/projekte/grundlagen-und-konzepte-fuer-effiziente-dezentrale-stromnetze/).
-
-## Functionality
-
-PyPSA can calculate:
-
--   static power flow (using both the full non-linear network equations and the
-    linearised network equations)
--   linear optimal power flow (least-cost optimisation of power plant and
-    storage dispatch within network constraints, using the linear network
-    equations, over several snapshots)
--   security-constrained linear optimal power flow
--   total electricity/energy system least-cost investment optimisation (using
-    linear network equations, over several snapshots and investment periods
-    simultaneously for optimisation of generation and storage dispatch and
-    investment in the capacities of generation, storage, transmission and other
-    infrastructure)
-
-It has models for:
-
--   meshed multiply-connected AC and DC networks, with controllable converters
-    between AC and DC networks
--   standard types for lines and transformers following the implementation in
-    [pandapower](https://www.pandapower.org/)
--   conventional dispatchable generators and links with unit commitment
--   generators with time-varying power availability, such as wind and solar
-    generators
--   storage units with efficiency losses
--   simple hydroelectricity with inflow and spillage
--   coupling with other energy carriers (e.g. resistive Power-to-Heat (P2H),
-    Power-to-Gas (P2G), battery electric vehicles (BEVs), Fischer-Tropsch,
-    direct air capture (DAC))
--   basic components out of which more complicated assets can be built, such as
-    Combined Heat and Power (CHP) units and heat pumps.
-
-## Documentation
-
-[Documentation](https://pypsa.readthedocs.io/en/latest/index.html)
-
-[Quick start](https://pypsa.readthedocs.io/en/latest/quick_start.html)
-
-[Examples](https://pypsa.readthedocs.io/en/latest/examples-basic.html)
-
-[Known users of
-PyPSA](https://pypsa.readthedocs.io/en/latest/users.html)
-
-## Installation
-
-pip:
-
-```pip install pypsa```
-
-conda/mamba:
-
-```conda install -c conda-forge pypsa```
-
-Additionally, install a solver.
-
-## Usage
-
-```py
-import pypsa
+<span class="pl-c"># get statistics</span>
+<span class="pl-s1">n</span>.<span class="pl-en">statistics</span>()
+<span class="pl-s1">n</span>.<span class="pl-s1">statistics</span>.<span class="pl-en">energy_balance</span>()</pre><div class="zeroclipboard-container">
+    <clipboard-copy aria-label="Copy" class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 tooltipped-no-delay d-flex flex-justify-center flex-items-center" data-copy-feedback="Copied!" data-tooltip-direction="w" value="import pypsa
 
 # create a new network
 n = pypsa.Network()
-n.add("Bus", "mybus")
-n.add("Load", "myload", bus="mybus", p_set=100)
-n.add("Generator", "mygen", bus="mybus", p_nom=100, marginal_cost=20)
+n.add(&quot;Bus&quot;, &quot;mybus&quot;)
+n.add(&quot;Load&quot;, &quot;myload&quot;, bus=&quot;mybus&quot;, p_set=100)
+n.add(&quot;Generator&quot;, &quot;mygen&quot;, bus=&quot;mybus&quot;, p_nom=100, marginal_cost=20)
 
 # load an example network
 n = pypsa.examples.ac_dc_meshed()
@@ -119,119 +93,99 @@ n.plot()
 
 # get statistics
 n.statistics()
-n.statistics.energy_balance()
-```
-
-There are [more extensive
-examples](https://pypsa.readthedocs.io/en/latest/examples-basic.html) available
-as [Jupyter notebooks](https://jupyter.org/). They are also described in the
-[doc/examples.rst](doc/examples.rst) and are available as Python scripts in
-[examples/](examples/).
-
-## Screenshots
-
-[PyPSA-Eur](https://github.com/PyPSA/pypsa-eur) optimising capacities of
-generation, storage and transmission lines (9% line volume expansion allowed)
-for a 95% reduction in CO2 emissions in Europe compared to 1990 levels
-
-![image](doc/img/elec_s_256_lv1.09_Co2L-3H.png)
-
-[SciGRID model](https://power.scigrid.de/) simulating the German power system
-for 2015.
-
-![image](doc/img/stacked-gen_and_storage-scigrid.png)
-
-![image](doc/img/lmp_and_line-loading.png)
-
-## Dependencies
-
-PyPSA is written and tested to be compatible with Python 3.7 and above.
-The last release supporting Python 2.7 was PyPSA 0.15.0.
-
-It leans heavily on the following Python packages:
-
--   [pandas](http://pandas.pydata.org/) for storing data about
-    components and time series
--   [numpy](http://www.numpy.org/) and [scipy](http://scipy.org/) for
-    calculations, such as linear algebra and sparse matrix calculations
--   [networkx](https://networkx.github.io/) for some network
-    calculations
--   [matplotlib](https://matplotlib.org/) for static plotting
--   [linpy](https://github.com/PyPSA/linopy) for preparing optimisation problems
-    (currently only linear and mixed integer linear optimisation)
--   [cartopy](https://scitools.org.uk/cartopy) for plotting the
-    baselayer map
--   [pytest](http://pytest.org/) for unit testing
--   [logging](https://docs.python.org/3/library/logging.html) for
-    managing messages
-
-The optimisation uses interface libraries like `linopy` which are
-independent of the preferred solver. You can use e.g. one of the free
-solvers [GLPK](https://www.gnu.org/software/glpk/) and
-[CLP/CBC](https://github.com/coin-or/Cbc/) or the commercial solver
-[Gurobi](http://www.gurobi.com/) for which free academic licenses are
-available.
-
-## Documentation
-
-Please check the [documentation](https://pypsa.readthedocs.io).
-
-## Contributing and Support
-
-We strongly welcome anyone interested in contributing to this project. If you have any ideas, suggestions or encounter problems, feel invited to file issues or make pull requests on GitHub.
-
--   In case of code-related **questions**, please post on [stack overflow](https://stackoverflow.com/questions/tagged/pypsa).
--   For non-programming related and more general questions please refer to the [mailing list](https://groups.google.com/group/pypsa).
--   To **discuss** with other PyPSA users, organise projects, share news, and get in touch with the community you can use the [discord server](https://discord.gg/AnuJBk23FU).
--   For **bugs and feature requests**, please use the [PyPSA Github Issues page](https://github.com/PyPSA/PyPSA/issues).
--   For **troubleshooting**, please check the [troubleshooting](https://pypsa.readthedocs.io/en/latest/troubleshooting.html) in the documentation.
-
-## Code of Conduct
-
-Please respect our [code of conduct](CODE_OF_CONDUCT.md).
-
-## Citing PyPSA
-
-If you use PyPSA for your research, we would appreciate it if you would
-cite the following paper:
-
--   T. Brown, J. Hörsch, D. Schlachtberger, [PyPSA: Python for Power
-    System Analysis](https://arxiv.org/abs/1707.09913), 2018, [Journal
-    of Open Research
-    Software](https://openresearchsoftware.metajnl.com/), 6(1),
-    [arXiv:1707.09913](https://arxiv.org/abs/1707.09913),
-    [DOI:10.5334/jors.188](https://doi.org/10.5334/jors.188)
-
-Please use the following BibTeX:
-
-    @article{PyPSA,
-       author = {T. Brown and J. H\"orsch and D. Schlachtberger},
-       title = {{PyPSA: Python for Power System Analysis}},
-       journal = {Journal of Open Research Software},
-       volume = {6},
-       issue = {1},
-       number = {4},
-       year = {2018},
-       eprint = {1707.09913},
-       url = {https://doi.org/10.5334/jors.188},
-       doi = {10.5334/jors.188}
-    }
-
-If you want to cite a specific PyPSA version, each release of PyPSA is
-stored on [Zenodo](https://zenodo.org/) with a release-specific DOI. The
-release-specific DOIs can be found linked from the overall PyPSA Zenodo
-DOI for Version 0.17.1 and onwards:
-
-[![image](https://zenodo.org/badge/DOI/10.5281/zenodo.3946412.svg)](https://doi.org/10.5281/zenodo.3946412)
-
-or from the overall PyPSA Zenodo DOI for Versions up to 0.17.0:
-
-[![image](https://zenodo.org/badge/DOI/10.5281/zenodo.786605.svg)](https://doi.org/10.5281/zenodo.786605)
-
-# Licence
-
-Copyright 2015-2023 [PyPSA
-Developers](https://pypsa.readthedocs.io/en/latest/developers.html)
-
-PyPSA is licensed under the open source [MIT
-License](https://github.com/PyPSA/PyPSA/blob/master/LICENSE.txt).
+n.statistics.energy_balance()" tabindex="0" role="button">
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon">
+    <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
+</svg>
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
+    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+</svg>
+    </clipboard-copy>
+  </div></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">还有</font></font><a href="https://pypsa.readthedocs.io/en/latest/examples-basic.html" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">更广泛的示例</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">可用作</font></font><a href="https://jupyter.org/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Jupyter 笔记本</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font><font style="vertical-align: inherit;">它们也在
+</font></font><a href="/PyPSA/PyPSA/blob/master/doc/examples.rst"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">doc/examples.rst中进行了描述，并在</font></font></a><font style="vertical-align: inherit;"></font><a href="/PyPSA/PyPSA/blob/master/examples"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">example/</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">中作为 Python 脚本提供
+</font><font style="vertical-align: inherit;">。</font></font></p>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">截图</font></font></h2><a id="user-content-screenshots" class="anchor" aria-label="永久链接：屏幕截图" href="#screenshots"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><a href="https://github.com/PyPSA/pypsa-eur"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">PyPSA-Eur</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">优化发电、存储和输电线路的容量（允许线路容量扩展 9%），与 1990 年的水平相比，欧洲二氧化碳排放量减少 95%</font></font></p>
+<p dir="auto"><a target="_blank" rel="noopener noreferrer" href="/PyPSA/PyPSA/blob/master/doc/img/elec_s_256_lv1.09_Co2L-3H.png"><img src="/PyPSA/PyPSA/raw/master/doc/img/elec_s_256_lv1.09_Co2L-3H.png" alt="图像" style="max-width: 100%;"></a></p>
+<p dir="auto"><a href="https://power.scigrid.de/" rel="nofollow"><font style="vertical-align: inherit;"></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">模拟 2015 年德国电力系统的</font><a href="https://power.scigrid.de/" rel="nofollow"><font style="vertical-align: inherit;">SciGRID 模型。</font></a></font></p>
+<p dir="auto"><a target="_blank" rel="noopener noreferrer" href="/PyPSA/PyPSA/blob/master/doc/img/stacked-gen_and_storage-scigrid.png"><img src="/PyPSA/PyPSA/raw/master/doc/img/stacked-gen_and_storage-scigrid.png" alt="图像" style="max-width: 100%;"></a></p>
+<p dir="auto"><a target="_blank" rel="noopener noreferrer" href="/PyPSA/PyPSA/blob/master/doc/img/lmp_and_line-loading.png"><img src="/PyPSA/PyPSA/raw/master/doc/img/lmp_and_line-loading.png" alt="图像" style="max-width: 100%;"></a></p>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">依赖关系</font></font></h2><a id="user-content-dependencies" class="anchor" aria-label="永久链接：依赖关系" href="#dependencies"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">PyPSA 经过编写和测试，与 Python 3.7 及更高版本兼容。</font><font style="vertical-align: inherit;">支持 Python 2.7 的最后一个版本是 PyPSA 0.15.0。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">它严重依赖以下 Python 包：</font></font></p>
+<ul dir="auto">
+<li><a href="http://pandas.pydata.org/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">pandas</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">用于存储有关组件和时间序列的数据</font></font></li>
+<li><a href="http://www.numpy.org/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">numpy</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">和</font></font><a href="http://scipy.org/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">scipy</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">用于计算，例如线性代数和稀疏矩阵计算</font></font></li>
+<li><a href="https://networkx.github.io/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">networkx</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">用于一些网络计算</font></font></li>
+<li><a href="https://matplotlib.org/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">matplotlib</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">用于静态绘图</font></font></li>
+<li><a href="https://github.com/PyPSA/linopy"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">linpy</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">用于准备优化问题（目前仅线性和混合整数线性优化）</font></font></li>
+<li><a href="https://scitools.org.uk/cartopy" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">cartopy</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">用于绘制底层地图</font></font></li>
+<li><a href="http://pytest.org/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">pytest</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">用于单元测试</font></font></li>
+<li><a href="https://docs.python.org/3/library/logging.html" rel="nofollow"><font style="vertical-align: inherit;"></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">用于管理消息的日志</font><a href="https://docs.python.org/3/library/logging.html" rel="nofollow"><font style="vertical-align: inherit;">记录</font></a></font></li>
+</ul>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">优化使用</font></font><code>linopy</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">独立于首选求解器的接口库。</font></font><a href="https://www.gnu.org/software/glpk/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">例如，您可以使用免费求解器GLPK</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">和
+</font></font><a href="https://github.com/coin-or/Cbc/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">CLP/CBC</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">之一或</font><font style="vertical-align: inherit;">提供免费学术许可证的</font><font style="vertical-align: inherit;">商业求解器
+</font></font><a href="http://www.gurobi.com/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Gurobi 。</font></font></a><font style="vertical-align: inherit;"></font></p>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">文档</font></font></h2><a id="user-content-documentation-1" class="anchor" aria-label="永久链接：文档" href="#documentation-1"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">请检查</font></font><a href="https://pypsa.readthedocs.io" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">文档</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font></p>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">贡献和支持</font></font></h2><a id="user-content-contributing-and-support" class="anchor" aria-label="永久链接：贡献和支持" href="#contributing-and-support"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">我们强烈欢迎任何有兴趣为该项目做出贡献的人。</font><font style="vertical-align: inherit;">如果您有任何想法、建议或遇到问题，欢迎在 GitHub 上提交问题或提出拉取请求。</font></font></p>
+<ul dir="auto">
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">如果有与代码相关的</font></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">问题，请在</font></font></strong><font style="vertical-align: inherit;"></font><a href="https://stackoverflow.com/questions/tagged/pypsa" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">堆栈溢出</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">上发帖</font><font style="vertical-align: inherit;">。</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">对于非编程相关和更一般的问题，请参阅</font></font><a href="https://groups.google.com/group/pypsa" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">邮件列表</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">要与其他 PyPSA 用户</font></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">讨论</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">、组织项目、分享新闻以及与社区取得联系，您可以使用</font></font><a href="https://discord.gg/AnuJBk23FU" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">不和谐服务器</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">对于</font></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">错误和功能请求</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">，请使用</font></font><a href="https://github.com/PyPSA/PyPSA/issues"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">PyPSA Github 问题页面</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">有关</font></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">故障排除</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">，请查看</font><font style="vertical-align: inherit;">文档中的</font></font><a href="https://pypsa.readthedocs.io/en/latest/troubleshooting.html" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">故障排除。</font></font></a><font style="vertical-align: inherit;"></font></li>
+</ul>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">行为守则</font></font></h2><a id="user-content-code-of-conduct" class="anchor" aria-label="永久链接：行为准则" href="#code-of-conduct"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">请尊重我们的</font></font><a href="/PyPSA/PyPSA/blob/master/CODE_OF_CONDUCT.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">行为准则</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font></p>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">引用 PyPSA</font></font></h2><a id="user-content-citing-pypsa" class="anchor" aria-label="永久链接：引用 PyPSA" href="#citing-pypsa"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">如果您使用 PyPSA 进行研究，如果您引用以下论文，我们将不胜感激：</font></font></p>
+<ul dir="auto">
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">T. Brown、J. Hörsch、D. Schlachtberger，</font></font><a href="https://arxiv.org/abs/1707.09913" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">PyPSA：用于电力系统分析的 Python</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">，2018 年，</font></font><a href="https://openresearchsoftware.metajnl.com/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">开放研究软件杂志</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">，6(1)，
+ </font></font><a href="https://arxiv.org/abs/1707.09913" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">arXiv:1707.09913</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">，
+ </font></font><a href="https://doi.org/10.5334/jors.188" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">DOI:10.5334/jors.188</font></font></a></li>
+</ul>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">请使用以下 BibTeX：</font></font></p>
+<div class="snippet-clipboard-content notranslate position-relative overflow-auto"><pre class="notranslate"><code>@article{PyPSA,
+   author = {T. Brown and J. H\"orsch and D. Schlachtberger},
+   title = {{PyPSA: Python for Power System Analysis}},
+   journal = {Journal of Open Research Software},
+   volume = {6},
+   issue = {1},
+   number = {4},
+   year = {2018},
+   eprint = {1707.09913},
+   url = {https://doi.org/10.5334/jors.188},
+   doi = {10.5334/jors.188}
+}
+</code></pre><div class="zeroclipboard-container">
+    <clipboard-copy aria-label="Copy" class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 tooltipped-no-delay d-flex flex-justify-center flex-items-center" data-copy-feedback="Copied!" data-tooltip-direction="w" value="@article{PyPSA,
+   author = {T. Brown and J. H\&quot;orsch and D. Schlachtberger},
+   title = {{PyPSA: Python for Power System Analysis}},
+   journal = {Journal of Open Research Software},
+   volume = {6},
+   issue = {1},
+   number = {4},
+   year = {2018},
+   eprint = {1707.09913},
+   url = {https://doi.org/10.5334/jors.188},
+   doi = {10.5334/jors.188}
+}" tabindex="0" role="button">
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon">
+    <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
+</svg>
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
+    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+</svg>
+    </clipboard-copy>
+  </div></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">如果您想引用特定的 PyPSA 版本，PyPSA 的每个版本都存储在</font></font><a href="https://zenodo.org/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Zenodo</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">上，并具有特定于版本的 DOI。</font><font style="vertical-align: inherit;">特定于版本的 DOI 可以从版本 0.17.1 及更高版本的整体 PyPSA Zenodo DOI 中找到链接：</font></font></p>
+<p dir="auto"><a href="https://doi.org/10.5281/zenodo.3946412" rel="nofollow"><img src="https://camo.githubusercontent.com/3d50522bdeecd8d23577acbcee24ca2d118042a7bf5573cc57255fb0258c09d2/68747470733a2f2f7a656e6f646f2e6f72672f62616467652f444f492f31302e353238312f7a656e6f646f2e333934363431322e737667" alt="图像" data-canonical-src="https://zenodo.org/badge/DOI/10.5281/zenodo.3946412.svg" style="max-width: 100%;"></a></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">或来自 0.17.0 及以下版本的整体 PyPSA Zenodo DOI：</font></font></p>
+<p dir="auto"><a href="https://doi.org/10.5281/zenodo.786605" rel="nofollow"><img src="https://camo.githubusercontent.com/77e1068bf2a93ee2fd0272ea15115f191d28c0ccfedbec6b706a6c58f5f4f74e/68747470733a2f2f7a656e6f646f2e6f72672f62616467652f444f492f31302e353238312f7a656e6f646f2e3738363630352e737667" alt="图像" data-canonical-src="https://zenodo.org/badge/DOI/10.5281/zenodo.786605.svg" style="max-width: 100%;"></a></p>
+<div class="markdown-heading" dir="auto"><h1 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">执照</font></font></h1><a id="user-content-licence" class="anchor" aria-label="永久链接：许可证" href="#licence"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">版权所有 2015-2024 </font></font><a href="https://pypsa.readthedocs.io/en/latest/developers.html" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">PyPSA 开发人员</font></font></a></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">PyPSA 根据开源</font></font><a href="https://github.com/PyPSA/PyPSA/blob/master/LICENSE.txt"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">MIT 许可证</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">获得许可。</font></font></p>
+</article></div>
