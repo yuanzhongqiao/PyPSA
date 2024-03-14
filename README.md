@@ -73,44 +73,17 @@
 <span class="pl-c"># get statistics</span>
 <span class="pl-s1">n</span>.<span class="pl-en">statistics</span>()
 <span class="pl-s1">n</span>.<span class="pl-s1">statistics</span>.<span class="pl-en">energy_balance</span>()</pre><div class="zeroclipboard-container">
-    <clipboard-copy aria-label="Copy" class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 tooltipped-no-delay d-flex flex-justify-center flex-items-center" data-copy-feedback="Copied!" data-tooltip-direction="w" value="import pypsa
-
-# create a new network
-n = pypsa.Network()
-n.add(&quot;Bus&quot;, &quot;mybus&quot;)
-n.add(&quot;Load&quot;, &quot;myload&quot;, bus=&quot;mybus&quot;, p_set=100)
-n.add(&quot;Generator&quot;, &quot;mygen&quot;, bus=&quot;mybus&quot;, p_nom=100, marginal_cost=20)
-
-# load an example network
-n = pypsa.examples.ac_dc_meshed()
-
-# run the optimisation
-n.optimize()
-
-# plot results
-n.generators_t.p.plot()
-n.plot()
-
-# get statistics
-n.statistics()
-n.statistics.energy_balance()" tabindex="0" role="button">
-      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon">
-    <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
-</svg>
-      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
-    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
-</svg>
-    </clipboard-copy>
+    
   </div></div>
 <p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">还有</font></font><a href="https://pypsa.readthedocs.io/en/latest/examples-basic.html" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">更广泛的示例</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">可用作</font></font><a href="https://jupyter.org/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Jupyter 笔记本</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font><font style="vertical-align: inherit;">它们也在
-</font></font><a href="/PyPSA/PyPSA/blob/master/doc/examples.rst"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">doc/examples.rst中进行了描述，并在</font></font></a><font style="vertical-align: inherit;"></font><a href="/PyPSA/PyPSA/blob/master/examples"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">example/</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">中作为 Python 脚本提供
+</font></font><a href="https://github.com/PyPSA/PyPSA/blob/master/doc/examples.rst"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">doc/examples.rst中进行了描述，并在</font></font></a><font style="vertical-align: inherit;"></font><a href="https://github.com/PyPSA/PyPSA/blob/master/examples"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">example/</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">中作为 Python 脚本提供
 </font><font style="vertical-align: inherit;">。</font></font></p>
 <div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">截图</font></font></h2><a id="user-content-screenshots" class="anchor" aria-label="永久链接：屏幕截图" href="#screenshots"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
 <p dir="auto"><a href="https://github.com/PyPSA/pypsa-eur"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">PyPSA-Eur</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">优化发电、存储和输电线路的容量（允许线路容量扩展 9%），与 1990 年的水平相比，欧洲二氧化碳排放量减少 95%</font></font></p>
-<p dir="auto"><a target="_blank" rel="noopener noreferrer" href="/PyPSA/PyPSA/blob/master/doc/img/elec_s_256_lv1.09_Co2L-3H.png"><img src="/PyPSA/PyPSA/raw/master/doc/img/elec_s_256_lv1.09_Co2L-3H.png" alt="图像" style="max-width: 100%;"></a></p>
+<p dir="auto"><a target="_blank" rel="noopener noreferrer" href="https://github.com/PyPSA/PyPSA/blob/master/doc/img/elec_s_256_lv1.09_Co2L-3H.png"><img src="https://github.com/PyPSA/PyPSA/raw/master/doc/img/elec_s_256_lv1.09_Co2L-3H.png" alt="图像" style="max-width: 100%;"></a></p>
 <p dir="auto"><a href="https://power.scigrid.de/" rel="nofollow"><font style="vertical-align: inherit;"></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">模拟 2015 年德国电力系统的</font><a href="https://power.scigrid.de/" rel="nofollow"><font style="vertical-align: inherit;">SciGRID 模型。</font></a></font></p>
-<p dir="auto"><a target="_blank" rel="noopener noreferrer" href="/PyPSA/PyPSA/blob/master/doc/img/stacked-gen_and_storage-scigrid.png"><img src="/PyPSA/PyPSA/raw/master/doc/img/stacked-gen_and_storage-scigrid.png" alt="图像" style="max-width: 100%;"></a></p>
-<p dir="auto"><a target="_blank" rel="noopener noreferrer" href="/PyPSA/PyPSA/blob/master/doc/img/lmp_and_line-loading.png"><img src="/PyPSA/PyPSA/raw/master/doc/img/lmp_and_line-loading.png" alt="图像" style="max-width: 100%;"></a></p>
+<p dir="auto"><a target="_blank" rel="noopener noreferrer" href="https://github.com/PyPSA/PyPSA/blob/master/doc/img/stacked-gen_and_storage-scigrid.png"><img src="https://github.com/PyPSA/PyPSA/raw/master/doc/img/stacked-gen_and_storage-scigrid.png" alt="图像" style="max-width: 100%;"></a></p>
+<p dir="auto"><a target="_blank" rel="noopener noreferrer" href="https://github.com/PyPSA/PyPSA/blob/master/doc/img/lmp_and_line-loading.png"><img src="https://github.com/PyPSA/PyPSA/raw/master/doc/img/lmp_and_line-loading.png" alt="图像" style="max-width: 100%;"></a></p>
 <div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">依赖关系</font></font></h2><a id="user-content-dependencies" class="anchor" aria-label="永久链接：依赖关系" href="#dependencies"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
 <p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">PyPSA 经过编写和测试，与 Python 3.7 及更高版本兼容。</font><font style="vertical-align: inherit;">支持 Python 2.7 的最后一个版本是 PyPSA 0.15.0。</font></font></p>
 <p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">它严重依赖以下 Python 包：</font></font></p>
